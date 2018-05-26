@@ -21,5 +21,5 @@ var menudata={children:[
 {text:"p",url:"globals_eval.html#index_p"}]},
 {text:"Macros",url:"globals_defs.html",children:[
 {text:"f",url:"globals_defs.html#index_f"},
-{text:"p",url:"globals_defs.html#index_p"},
-{text:"t",url:"globals_defs.html#index_t"}]}]}]}]}
+{text:"p",url:"globals_defs_p.html#index_p"},
+{text:"t",url:"globals_defs_t.html#index_t"}]}]}]}]}

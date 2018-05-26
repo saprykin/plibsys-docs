@@ -19,7 +19,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">plibsys
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
   </td>
  </tr>
@@ -107,6 +107,7 @@ Functions</h2></td></tr>
 <li>Windows doesn't own IPC objects (processes own them), which means that a semaphore will be removed from the system after the last process or thread closes it (or after terminating all the processes and threads holding open semaphore).</li>
 <li>UNIX systems own IPC objects. Because of that UNIX IPC objects can survive an application crash: an already used semaphore can be opened in a locked state and an application can fail into a deadlock or an inconsistent state. This could happen if you have not closed all the open semaphores explicitly before terminating the application.</li>
 <li>IRIX allows to open several instances of a semaphore within the single process, but it will close the object after the first close call from any of the threads within the process.</li>
+<li>AmigaOS has process-wide semaphores without actual tracking of counter, which means that semaphore behaves the same way as recursive mutex.</li>
 <li>OpenVMS (as of 8.4 release) has declared prototypes for process-wide named semaphores but the actual implementation is broken.</li>
 <li>OS/2 lacks support for process-wide named semaphores.</li>
 <li>Syllable lacks support for process-wide named semaphores.</li>
@@ -130,7 +131,7 @@ Functions</h2></td></tr>
 
 <p>Semaphore opaque data structure. </p>
 
-<p class="definition">Definition at line <a class="el" href="psemaphore_8h_source.html#l00103">103</a> of file <a class="el" href="psemaphore_8h_source.html">psemaphore.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psemaphore_8h_source.html#l00114">114</a> of file <a class="el" href="psemaphore_8h_source.html">psemaphore.h</a>.</p>
 
 </div>
 </div>
@@ -171,7 +172,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="psemaphore_8h_source.html#l00097">97</a> of file <a class="el" href="psemaphore_8h_source.html">psemaphore.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psemaphore_8h_source.html#l00108">108</a> of file <a class="el" href="psemaphore_8h_source.html">psemaphore.h</a>.</p>
 
 </div>
 </div>

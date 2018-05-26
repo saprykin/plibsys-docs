@@ -19,7 +19,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">plibsys
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
   </td>
  </tr>
@@ -85,7 +85,7 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Mutex routines. </p>
 <dl class="section author"><dt>Author</dt><dd>Alexander Saprykin</dd></dl>
 <p>A mutex is a mutual exclusive (hence mutex) synchronization primitive which allows access to a critical section only to one of the concurrently running threads. It is used to protected shared data structures from concurrent modifications which could lead to unpredictable behavior.</p>
-<p>When entering a critical section a thread must call <a class="el" href="pmutex_8h.html#a79975104474ec8663d231f9b8afb35f5" title="Locks a mutex. ">p_mutex_lock()</a> to get a lock. If another thread is already holding the lock all other threads will be suspended until the lock is released with <a class="el" href="pmutex_8h.html#adffb84261423279b73f2fd2f3060137a" title="Releases a locked mutex. ">p_mutex_unlock()</a>. After releasing the lock one of the waiting threads is resumed to continue execution. On most systems it is not specified whether a mutex waiting queue is fair (FIFO) on not.</p>
+<p>When entering a critical section a thread must call <a class="el" href="pmutex_8h.html#a79975104474ec8663d231f9b8afb35f5" title="Locks a mutex. ">p_mutex_lock()</a> to get a lock. If another thread is already holding the lock all other threads will be suspended until the lock is released with <a class="el" href="pmutex_8h.html#adffb84261423279b73f2fd2f3060137a" title="Releases a locked mutex. ">p_mutex_unlock()</a>. After releasing the lock one of the waiting threads is resumed to continue execution. On most systems it is not specified whether a mutex waiting queue is fair (FIFO) or not.</p>
 <p>The typical mutex usage: </p><div class="fragment"><div class="line"><a class="code" href="pmutex_8h.html#a79975104474ec8663d231f9b8afb35f5">p_mutex_lock</a> (mutex);</div><div class="line"></div><div class="line">... code in critical section ...</div><div class="line"></div><div class="line">p_mutex_unlock (mutex);</div></div><!-- fragment --><p> You can also think of the mutex as a binary semaphore.</p>
 <p>It is implementation dependent whether recursive locking or non-locked mutex unlocking is allowed, but such actions can lead to unpredictable behavior. Do not rely on such behavior in cross-platform applications.</p>
 <p>This is the thread scoped mutex implementation. You could not share this mutex outside the process adress space, but you can share it between the threads of the same process. </p>
@@ -106,7 +106,7 @@ Functions</h2></td></tr>
 
 <p>Mutex opaque data structure. </p>
 
-<p class="definition">Definition at line <a class="el" href="pmutex_8h_source.html#l00067">67</a> of file <a class="el" href="pmutex_8h_source.html">pmutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pmutex_8h_source.html#l00075">75</a> of file <a class="el" href="pmutex_8h_source.html">pmutex.h</a>.</p>
 
 </div>
 </div>

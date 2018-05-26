@@ -19,7 +19,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">plibsys
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
   </td>
  </tr>
@@ -63,7 +63,13 @@ Macros</h2></td></tr>
 <tr class="memitem:a7e13a27122d4beb54d1691d63aff20cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pmacros_8h.html#a7e13a27122d4beb54d1691d63aff20cf">P_GNUC_WARN_UNUSED_RESULT</a></td></tr>
 <tr class="memdesc:a7e13a27122d4beb54d1691d63aff20cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives a warning if the result returned from a function is not being used.  <a href="#a7e13a27122d4beb54d1691d63aff20cf">More...</a><br /></td></tr>
 <tr class="separator:a7e13a27122d4beb54d1691d63aff20cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc4a56cf925c0c90d086f3480ffc257c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pmacros_8h.html#afc4a56cf925c0c90d086f3480ffc257c">P_LIB_API</a></td></tr>
+<tr class="memitem:a589c668522193957c362cb4f4239253b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pmacros_8h.html#a589c668522193957c362cb4f4239253b">P_LIB_GLOBAL_API</a></td></tr>
+<tr class="memdesc:a589c668522193957c362cb4f4239253b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a symbol (variable, function) as global.  <a href="#a589c668522193957c362cb4f4239253b">More...</a><br /></td></tr>
+<tr class="separator:a589c668522193957c362cb4f4239253b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affea6ff3f9a1c315e076d694d5f39ae5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pmacros_8h.html#affea6ff3f9a1c315e076d694d5f39ae5">P_LIB_INTERNAL_API</a></td></tr>
+<tr class="memdesc:affea6ff3f9a1c315e076d694d5f39ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a symbol (variable, function) as local.  <a href="#affea6ff3f9a1c315e076d694d5f39ae5">More...</a><br /></td></tr>
+<tr class="separator:affea6ff3f9a1c315e076d694d5f39ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc4a56cf925c0c90d086f3480ffc257c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pmacros_8h.html#afc4a56cf925c0c90d086f3480ffc257c">P_LIB_API</a>&#160;&#160;&#160;<a class="el" href="pmacros_8h.html#a589c668522193957c362cb4f4239253b">P_LIB_GLOBAL_API</a></td></tr>
 <tr class="memdesc:afc4a56cf925c0c90d086f3480ffc257c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports a symbol from a shared library.  <a href="#afc4a56cf925c0c90d086f3480ffc257c">More...</a><br /></td></tr>
 <tr class="separator:afc4a56cf925c0c90d086f3480ffc257c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91393386f2dc9433ef76726eb32e4829"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pmacros_8h.html#a91393386f2dc9433ef76726eb32e4829">P_NO_RETURN</a></td></tr>
@@ -135,7 +141,7 @@ Macros</h2></td></tr>
 <p>Starts .h file declarations to be exported as C functions. </p>
 <dl class="section since"><dt>Since</dt><dd>0.0.1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00239">239</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00298">298</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
 
 </div>
 </div>
@@ -164,7 +170,7 @@ Macros</h2></td></tr>
 </dl>
 <dl class="section since"><dt>Since</dt><dd>0.0.1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00157">157</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00216">216</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
 
 </div>
 </div>
@@ -183,7 +189,7 @@ Macros</h2></td></tr>
 <p>Closes .h file declarations to be exported as C functions, should be always used after <a class="el" href="pmacros_8h.html#a8bfdf2ea2aa90a7f76422c895f8d90e6" title="Starts .h file declarations to be exported as C functions. ">P_BEGIN_DECLS</a>. </p>
 <dl class="section since"><dt>Since</dt><dd>0.0.1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00240">240</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00299">299</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
 
 </div>
 </div>
@@ -212,7 +218,7 @@ Macros</h2></td></tr>
 </dl>
 <dl class="section since"><dt>Since</dt><dd>0.0.1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00149">149</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00208">208</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
 
 </div>
 </div>
@@ -231,7 +237,7 @@ Macros</h2></td></tr>
 <p>Gives a warning if the result returned from a function is not being used. </p>
 <dl class="section since"><dt>Since</dt><dd>0.0.1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00064">64</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00072">72</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
 
 </div>
 </div>
@@ -242,7 +248,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define P_LIB_API</td>
+          <td class="memname">#define P_LIB_API&#160;&#160;&#160;<a class="el" href="pmacros_8h.html#a589c668522193957c362cb4f4239253b">P_LIB_GLOBAL_API</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -250,7 +256,49 @@ Macros</h2></td></tr>
 <p>Exports a symbol from a shared library. </p>
 <dl class="section since"><dt>Since</dt><dd>0.0.1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00078">78</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00138">138</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
+
+</div>
+</div>
+<a id="a589c668522193957c362cb4f4239253b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a589c668522193957c362cb4f4239253b">&#9670;&nbsp;</a></span>P_LIB_GLOBAL_API</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define P_LIB_GLOBAL_API</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Marks a symbol (variable, function) as global. </p>
+<dl class="section since"><dt>Since</dt><dd>0.0.4</dd></dl>
+<p>Global symbols are exported during the linkage and are available from the outside of the module they are defined in. Use it for public API.</p>
+<dl class="section note"><dt>Note</dt><dd>Some compilers allow to put this attribute at the beginning of the symbol declaration, and some also at the end of the declaration. Thus it is better to put it in the beginning for more portability. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00128">128</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
+
+</div>
+</div>
+<a id="affea6ff3f9a1c315e076d694d5f39ae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affea6ff3f9a1c315e076d694d5f39ae5">&#9670;&nbsp;</a></span>P_LIB_INTERNAL_API</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define P_LIB_INTERNAL_API</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Marks a symbol (variable, function) as local. </p>
+<dl class="section since"><dt>Since</dt><dd>0.0.4</dd></dl>
+<p>Local symbols are not exported during the linkage and are not available from the outside of the module they are defined in. Use it for internal API.</p>
+<dl class="section note"><dt>Note</dt><dd>Some compilers allow to put this attribute at the beginning of the symbol declaration, and some also at the end of the declaration. Thus it is better to put it in the beginning for more portability. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00129">129</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
 
 </div>
 </div>
@@ -273,7 +321,7 @@ Macros</h2></td></tr>
 <p>Hints a compiler that a condition is likely to be true so it can perform code optimizations. </p>
 <dl class="section since"><dt>Since</dt><dd>0.0.1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00124">124</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00183">183</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
 
 </div>
 </div>
@@ -292,7 +340,7 @@ Macros</h2></td></tr>
 <p>Notifies a compiler that a function will never return a value (i.e. </p>
 <p>due to the abort () call). </p><dl class="section since"><dt>Since</dt><dd>0.0.1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00100">100</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00159">159</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
 
 </div>
 </div>
@@ -315,7 +363,7 @@ Macros</h2></td></tr>
 <p>Hints a compiler that a condition is likely to be false so it can perform code optimizations. </p>
 <dl class="section since"><dt>Since</dt><dd>0.0.1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00125">125</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00184">184</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
 
 </div>
 </div>
@@ -338,7 +386,7 @@ Macros</h2></td></tr>
 <p>Macro to by-pass a compiler warning on unused variables. </p>
 <dl class="section since"><dt>Since</dt><dd>0.0.1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00133">133</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00192">192</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
 
 </div>
 </div>
@@ -367,7 +415,7 @@ Macros</h2></td></tr>
 </dl>
 <dl class="section since"><dt>Since</dt><dd>0.0.1 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00141">141</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00200">200</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
 
 </div>
 </div>
@@ -434,7 +482,7 @@ Macros</h2></td></tr>
 <dl class="section since"><dt>Since</dt><dd>0.0.1 </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="pmain_8h.html#a17c3a572c94bb7c6d038e67bf01dff57" title="Gets the library version against which it was compiled at run-time. ">p_libsys_version()</a></dd></dl>
 <div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code" href="pmacros_8h.html#aa93fc90bd9577777bb80ea11e6e9d48c">PLIBSYS_VERSION</a> &gt;= <a class="code" href="pmacros_8h.html#a7536dc400fb6755b7a147fe66f6cf8f3">PLIBSYS_VERSION_CHECK</a> (0, 0, 1))</div><div class="line">...</div></div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00220">220</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pmacros_8h_source.html#l00279">279</a> of file <a class="el" href="pmacros_8h_source.html">pmacros.h</a>.</p>
 
 </div>
 </div>

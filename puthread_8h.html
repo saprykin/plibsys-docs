@@ -19,7 +19,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">plibsys
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
   </td>
  </tr>
@@ -123,7 +123,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a441228552ba031cab196eafab1ff5536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the ideal number of threads for the system based on the number of avaialble CPUs and cores (physical and logical).  <a href="#a441228552ba031cab196eafab1ff5536">More...</a><br /></td></tr>
 <tr class="separator:a441228552ba031cab196eafab1ff5536"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a693b44e6a1f0a01e854e99a57e7e6052"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pmacros_8h.html#afc4a56cf925c0c90d086f3480ffc257c">P_LIB_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="puthread_8h.html#a693b44e6a1f0a01e854e99a57e7e6052">p_uthread_ref</a> (<a class="el" href="puthread_8h.html#aeaa81574c330c05ecc18c53fc74da902">PUThread</a> *thread)</td></tr>
-<tr class="memdesc:a693b44e6a1f0a01e854e99a57e7e6052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Incremetns a thread reference counter.  <a href="#a693b44e6a1f0a01e854e99a57e7e6052">More...</a><br /></td></tr>
+<tr class="memdesc:a693b44e6a1f0a01e854e99a57e7e6052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments a thread reference counter.  <a href="#a693b44e6a1f0a01e854e99a57e7e6052">More...</a><br /></td></tr>
 <tr class="separator:a693b44e6a1f0a01e854e99a57e7e6052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af10134f5c731f4f8bae17bc2a592f549"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pmacros_8h.html#afc4a56cf925c0c90d086f3480ffc257c">P_LIB_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="puthread_8h.html#af10134f5c731f4f8bae17bc2a592f549">p_uthread_unref</a> (<a class="el" href="puthread_8h.html#aeaa81574c330c05ecc18c53fc74da902">PUThread</a> *thread)</td></tr>
 <tr class="memdesc:af10134f5c731f4f8bae17bc2a592f549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrements a thread reference counter.  <a href="#af10134f5c731f4f8bae17bc2a592f549">More...</a><br /></td></tr>
@@ -150,7 +150,7 @@ Functions</h2></td></tr>
 <p>A thread is a system execution unit which is managed independently by the scheduler of the operating system. It allows to do things in parallel or concurrently.</p>
 <p><a class="el" href="puthread_8h.html#aeaa81574c330c05ecc18c53fc74da902" title="Thread opaque data type. ">PUThread</a> provides a convinient way of multithreading support using native routines to provide the best performance on the target system.</p>
 <p>To create the thread use the <a class="el" href="puthread_8h.html#aae5d39485201048bcb9cc250b57a3bfb" title="Creates a PUThread and starts it. ">p_uthread_create()</a> or <a class="el" href="puthread_8h.html#a65f3f08a0d8500257927bde1cd2effb2" title="Creates a new PUThread and starts it. ">p_uthread_create_full()</a> routines. Joinable threads allow to wait until their execution is finished before proceeding further. Thus you can synchronize threads' execution within the main thread.</p>
-<p>A reference counter mechanism is used to keep track of a <a class="el" href="puthread_8h.html#aeaa81574c330c05ecc18c53fc74da902" title="Thread opaque data type. ">PUThread</a> structure. It means that the structure will be freed automatically when the reference counter becomes zero. Use <a class="el" href="puthread_8h.html#a693b44e6a1f0a01e854e99a57e7e6052" title="Incremetns a thread reference counter. ">p_uthread_ref()</a> to hold the structure and <a class="el" href="puthread_8h.html#af10134f5c731f4f8bae17bc2a592f549" title="Decrements a thread reference counter. ">p_uthread_unref()</a> to decrement the counter back. A running thread holds a reference to itself structure, so you do not require to hold a reference to the thread while it is running.</p>
+<p>A reference counter mechanism is used to keep track of a <a class="el" href="puthread_8h.html#aeaa81574c330c05ecc18c53fc74da902" title="Thread opaque data type. ">PUThread</a> structure. It means that the structure will be freed automatically when the reference counter becomes zero. Use <a class="el" href="puthread_8h.html#a693b44e6a1f0a01e854e99a57e7e6052" title="Increments a thread reference counter. ">p_uthread_ref()</a> to hold the structure and <a class="el" href="puthread_8h.html#af10134f5c731f4f8bae17bc2a592f549" title="Decrements a thread reference counter. ">p_uthread_unref()</a> to decrement the counter back. A running thread holds a reference to itself structure, so you do not require to hold a reference to the thread while it is running.</p>
 <p>Priorities (if supported) allow to tune scheduler behavior: threads with higher priority will be executed more frequently. Be careful that improper priorities may lead to negative effects when some threads may receive almost zero execution time.</p>
 <p>Thread priorities are unreliable: not all operating systems respect thread priorities in favour of process ones. Priorities may be ignored for bound threads (every thread bound to a kernel light-weight thread as 1:1), other systems may require administrative privileges to change the thread priority (i.e. Linux). Windows always respects thread priorities.</p>
 <p>To put the current thread (even if it was not created using the <a class="el" href="puthread_8h.html#aeaa81574c330c05ecc18c53fc74da902" title="Thread opaque data type. ">PUThread</a> routines) in a sleep state use <a class="el" href="puthread_8h.html#a5d042032a0baf0f902daf9b99a587368" title="Sleeps the current thread (caller) for a specified amount of time. ">p_uthread_sleep()</a>.</p>
@@ -175,7 +175,7 @@ Functions</h2></td></tr>
 
 <p>Thread opaque data type. </p>
 
-<p class="definition">Definition at line <a class="el" href="puthread_8h_source.html#l00094">94</a> of file <a class="el" href="puthread_8h_source.html">puthread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="puthread_8h_source.html#l00102">102</a> of file <a class="el" href="puthread_8h_source.html">puthread.h</a>.</p>
 
 </div>
 </div>
@@ -193,7 +193,7 @@ Functions</h2></td></tr>
 
 <p>Typedef for a <a class="el" href="puthread_8h.html#aeaa81574c330c05ecc18c53fc74da902" title="Thread opaque data type. ">PUThread</a> running method. </p>
 
-<p class="definition">Definition at line <a class="el" href="puthread_8h_source.html#l00091">91</a> of file <a class="el" href="puthread_8h_source.html">puthread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="puthread_8h_source.html#l00099">99</a> of file <a class="el" href="puthread_8h_source.html">puthread.h</a>.</p>
 
 </div>
 </div>
@@ -211,7 +211,7 @@ Functions</h2></td></tr>
 
 <p>TLS key opaque data type. </p>
 
-<p class="definition">Definition at line <a class="el" href="puthread_8h_source.html#l00097">97</a> of file <a class="el" href="puthread_8h_source.html">puthread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="puthread_8h_source.html#l00105">105</a> of file <a class="el" href="puthread_8h_source.html">puthread.h</a>.</p>
 
 </div>
 </div>
@@ -265,7 +265,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="puthread_8h_source.html#l00100">100</a> of file <a class="el" href="puthread_8h_source.html">puthread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="puthread_8h_source.html#l00108">108</a> of file <a class="el" href="puthread_8h_source.html">puthread.h</a>.</p>
 
 </div>
 </div>
@@ -313,7 +313,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to <a class="el" href="puthread_8h.html#aeaa81574c330c05ecc18c53fc74da902" title="Thread opaque data type. ">PUThread</a> in case of success, NULL otherwise. </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>0.0.1 </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Unreference the returned value after use with <a class="el" href="puthread_8h.html#af10134f5c731f4f8bae17bc2a592f549" title="Decrements a thread reference counter. ">p_uthread_unref()</a>. You do not need to call <a class="el" href="puthread_8h.html#a693b44e6a1f0a01e854e99a57e7e6052" title="Incremetns a thread reference counter. ">p_uthread_ref()</a> explicitly on the returned value. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Unreference the returned value after use with <a class="el" href="puthread_8h.html#af10134f5c731f4f8bae17bc2a592f549" title="Decrements a thread reference counter. ">p_uthread_unref()</a>. You do not need to call <a class="el" href="puthread_8h.html#a693b44e6a1f0a01e854e99a57e7e6052" title="Increments a thread reference counter. ">p_uthread_ref()</a> explicitly on the returned value. </dd></dl>
 
 </div>
 </div>
@@ -374,7 +374,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to <a class="el" href="puthread_8h.html#aeaa81574c330c05ecc18c53fc74da902" title="Thread opaque data type. ">PUThread</a> in case of success, NULL otherwise. </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>0.0.1 </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Unreference the returned value after use with <a class="el" href="puthread_8h.html#af10134f5c731f4f8bae17bc2a592f549" title="Decrements a thread reference counter. ">p_uthread_unref()</a>. You do not need to call <a class="el" href="puthread_8h.html#a693b44e6a1f0a01e854e99a57e7e6052" title="Incremetns a thread reference counter. ">p_uthread_ref()</a> explicitly on the returned value. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Unreference the returned value after use with <a class="el" href="puthread_8h.html#af10134f5c731f4f8bae17bc2a592f549" title="Decrements a thread reference counter. ">p_uthread_unref()</a>. You do not need to call <a class="el" href="puthread_8h.html#a693b44e6a1f0a01e854e99a57e7e6052" title="Increments a thread reference counter. ">p_uthread_ref()</a> explicitly on the returned value. </dd></dl>
 
 </div>
 </div>
@@ -604,7 +604,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Incremetns a thread reference counter. </p>
+<p>Increments a thread reference counter. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">thread</td><td><a class="el" href="puthread_8h.html#aeaa81574c330c05ecc18c53fc74da902" title="Thread opaque data type. ">PUThread</a> to increment the reference counter. </td></tr>
